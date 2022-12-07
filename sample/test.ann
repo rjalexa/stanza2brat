@@ -1,0 +1,124 @@
+T1_1	DET 1 3	Il
+T1_2	NOUN 4 12	paziente
+T1_3	PROPN 13 18	Dante
+T1_4	PROPN 19 28	Alighieri
+T1_5	AUX 29 30	è
+T1_6	AUX 31 36	stato
+T1_7	VERB 37 47	ricoverato
+T1_8	ADP 48 54	presso
+T1_9	DET 55 57	il
+T1_10	NOUN 58 65	reparto
+T1_11	ADP 66 68	di
+T1_12	NOUN 69 84	cardiochirurgia
+T1_13	ADP 85 88	con
+T1_14	DET 89 91	un
+T1_15	NOUN 92 98	quadro
+T1_16	ADP 99 101	di
+T1_17	NOUN 102 110	ischemia
+T1_18	ADJ 111 121	coronarica
+T1_19	ADJ 122 127	acuta
+T1_20	PUNCT 127 128	.
+T2_1	DET 129 131	La
+T2_2	NOUN 132 146	determinazione
+T2_3	ADJ 147 167	elettrocardiografica
+T2_4	CCONJ 168 170	ed
+T2_5	DET 171 172	i
+T2_6	NOUN 173 179	marker
+T2_7	ADJ 180 190	plasmatici
+T2_8	PUNCT 191 192	(
+T2_9	NOUN 192 201	troponina
+T2_10	NOUN 202 206	fast
+T2_11	NUM 207 210	5.6
+T2_12	NOUN 211 213	mg
+T2_13	NOUN 213 216	/dl
+T2_14	PUNCT 216 217	)
+T2_15	AUX 218 223	hanno
+T2_16	VERB 224 233	orientato
+T2_17	ADP 234 239	verso
+T2_18	DET 240 243	una
+T2_19	NOUN 244 252	diagnosi
+T2_20	ADP 253 255	di
+T2_21	PROPN 256 262	NSTEMI
+T2_22	VERB 263 271	trattata
+T2_23	ADP 272 275	con
+T2_24	NOUN 276 284	stenting
+T2_25	ADJ 285 295	coronarico
+T2_26	PUNCT 295 296	.
+T3_1	NOUN 297 305	Paziente
+T3_2	VERB 306 313	dimesso
+T3_3	ADP 314 316	in
+T3_4	NOUN 317 327	condizioni
+T3_5	ADJ 328 335	stabili
+T3_6	PUNCT 335 336	.
+T4_1	NOUN 337 344	Terapia
+T4_2	PUNCT 344 345	:
+T4_3	NOUN 346 356	POLIX*25mg
+T4_4	NOUN 357 360	2cp
+T4_5	DET 361 363	al
+T4_7	NOUN 364 370	giorno
+T4_8	DET 371 375	ogni
+T4_9	NUM 376 378	12
+T4_10	NOUN 379 382	ore
+T4_11	ADV 383 390	lontano
+T4_12	DET 391 394	dai
+T4_14	NOUN 395 400	pasti
+R1_1	det Arg1:T1_1 Arg2:T1_2
+R1_2	nsubj_pass Arg1:T1_2 Arg2:T1_7
+R1_3	nmod Arg1:T1_3 Arg2:T1_2
+R1_4	flat_name Arg1:T1_4 Arg2:T1_3
+R1_5	aux Arg1:T1_5 Arg2:T1_7
+R1_6	aux_pass Arg1:T1_6 Arg2:T1_7
+R1_8	case Arg1:T1_8 Arg2:T1_10
+R1_9	det Arg1:T1_9 Arg2:T1_10
+R1_10	obl Arg1:T1_10 Arg2:T1_7
+R1_11	case Arg1:T1_11 Arg2:T1_12
+R1_12	nmod Arg1:T1_12 Arg2:T1_10
+R1_13	case Arg1:T1_13 Arg2:T1_15
+R1_14	det Arg1:T1_14 Arg2:T1_15
+R1_15	obl Arg1:T1_15 Arg2:T1_7
+R1_16	case Arg1:T1_16 Arg2:T1_17
+R1_17	nmod Arg1:T1_17 Arg2:T1_15
+R1_18	amod Arg1:T1_18 Arg2:T1_17
+R1_19	amod Arg1:T1_19 Arg2:T1_17
+R1_20	punct Arg1:T1_20 Arg2:T1_7
+R2_1	det Arg1:T2_1 Arg2:T2_2
+R2_2	nsubj Arg1:T2_2 Arg2:T2_16
+R2_3	amod Arg1:T2_3 Arg2:T2_2
+R2_4	cc Arg1:T2_4 Arg2:T2_6
+R2_5	det Arg1:T2_5 Arg2:T2_6
+R2_6	conj Arg1:T2_6 Arg2:T2_2
+R2_7	amod Arg1:T2_7 Arg2:T2_6
+R2_8	punct Arg1:T2_8 Arg2:T2_9
+R2_9	appos Arg1:T2_9 Arg2:T2_6
+R2_10	compound Arg1:T2_10 Arg2:T2_9
+R2_11	nummod Arg1:T2_11 Arg2:T2_12
+R2_12	nmod Arg1:T2_12 Arg2:T2_9
+R2_13	nmod Arg1:T2_13 Arg2:T2_9
+R2_14	punct Arg1:T2_14 Arg2:T2_9
+R2_15	aux Arg1:T2_15 Arg2:T2_16
+R2_17	case Arg1:T2_17 Arg2:T2_19
+R2_18	det Arg1:T2_18 Arg2:T2_19
+R2_19	obl Arg1:T2_19 Arg2:T2_16
+R2_20	case Arg1:T2_20 Arg2:T2_21
+R2_21	nmod Arg1:T2_21 Arg2:T2_19
+R2_22	acl Arg1:T2_22 Arg2:T2_19
+R2_23	case Arg1:T2_23 Arg2:T2_24
+R2_24	obl Arg1:T2_24 Arg2:T2_22
+R2_25	amod Arg1:T2_25 Arg2:T2_24
+R2_26	punct Arg1:T2_26 Arg2:T2_16
+R3_2	acl Arg1:T3_2 Arg2:T3_1
+R3_3	case Arg1:T3_3 Arg2:T3_4
+R3_4	obl Arg1:T3_4 Arg2:T3_2
+R3_5	amod Arg1:T3_5 Arg2:T3_4
+R3_6	punct Arg1:T3_6 Arg2:T3_1
+R4_1	parataxis Arg1:T4_1 Arg2:T4_4
+R4_2	punct Arg1:T4_2 Arg2:T4_1
+R4_3	nsubj Arg1:T4_3 Arg2:T4_4
+R4_5	det Arg1:T4_5 Arg2:T4_7
+R4_7	nmod Arg1:T4_7 Arg2:T4_4
+R4_8	det Arg1:T4_8 Arg2:T4_10
+R4_9	nummod Arg1:T4_9 Arg2:T4_10
+R4_10	nmod Arg1:T4_10 Arg2:T4_4
+R4_11	case Arg1:T4_11 Arg2:T4_14
+R4_12	det Arg1:T4_12 Arg2:T4_14
+R4_14	nmod Arg1:T4_14 Arg2:T4_10
