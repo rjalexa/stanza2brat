@@ -36,13 +36,30 @@ uposcolsdf = pd.DataFrame(
 )  # upos tag and corresponding color dataframe
 # input text
 IN_TXT = """
-Il paziente Dante Alighieri è stato ricoverato presso il reparto di cardiochirurgia con un quadro di ischemia coronarica acuta.
-La determinazione elettrocardiografica ed i marker plasmatici (troponina fast 5.6 mg/dl) hanno orientato verso una diagnosi di NSTEMI trattata con stenting coronarico.
-Paziente dimesso in condizioni stabili.
-Terapia:
-POLIX*25mg 2cp al giorno ogni 12 ore lontano dai pasti
+Egregio collega, dimettiamo in data odierna, il sig. Disney Eolo  nato il 17/01/1941 a MORDOR residente in VIA ELFI VERDI 17 ricoverato presso il reparto di CHIRURGIA VASCOLARE OSE in data 12/11/2022
+Motivo del Ricovero
+Aneurisma arteria iliaca comune sinistra
+Diagnosi alla dimissione
+Aneurisma arteria iliaca comune sinistra sottoposto ad esclusione endovascolare
+Dati Anamnestici
+stenosi aortica lieve, ipoacusia, ipetrofia prostatica benigna
+Interventi e procedure eseguite
+In data 13/11/22 intervento di esclusione endovascolare aneurisma arteria iliaca comune sinistra tramite kissing aorto-iliaco (VBX Gore 1 1x79) mediante accesso inguinale bilaterale.
+Decorso Clinico e condizioni del paziente alla Dimissione
+Regolare
+Terapia Farmacologica consigliata
+APROVEL* 150 MG 1 CP alle ore 07:00
+REXTAT 20MG 1 CP alle ore 22:00
+AVODART 0,5MG 1 volta al di alle ore: 20:00 1 CP
+PLAVIX*75 MG 1 CP alle ore 18:00
+OMNIC*0,4MG I CP alle ore 20:00
+CARDIOASPIRIN*IOOMG 1 CP alle ore 12:00
+AUGMENTIN* 1 G. 1 CP alle ore 07:00, 1 CP alle ore 18:00 fino al 21/10 FOLIFILL 5 MG 1 CP alle ore 07:00 per via orale
+PANTORC 20 MG I CP alle ore 07:00
+Controlli e consigli
+II paziente è atteso il giorno 20/12/22 alle ore 11.00 presso l'ambulatorio di Chirurgia vascolare (piano 0 stanza 10 edificio vecchio) peril controllo degli accessi inguinali.
+II paziente dovrà effettuare Angio-TC di controllo ad I mese dalla dimissione (presentarsi a digiuno da almeno 6 ore e con dosaggio creatininemia, 6 piano, Chirurgia Generale).
 """
-IN_TXT = "Noi stiamo al sole. Chi sta al bar? Che bello questo pomeriggio."
 # get Stanford's STANZA do its magic
 # download appropriate language model
 stanza.download(LANG, verbose=False)
@@ -80,10 +97,10 @@ for i, sentence in enumerate(doc.sentences):
 ### now reading from the dataframes write all BRAT Standoff files
 ## These are the corresponding txt and ann anallysis files
 # txt file
-with open("test.txt", "w", encoding="utf-8") as f:
+with open("output/test.txt", "w", encoding="utf-8") as f:
     f.write(IN_TXT)
 # ann file
-with open("test.ann", "w", encoding="utf-8") as f:
+with open("output/test.ann", "w", encoding="utf-8") as f:
     for row in t_df.itertuples():
         f.write(
             f"{row.Index}\t{row.upos} {row.start} {row.end}\t{row.text}\n"
@@ -95,7 +112,7 @@ with open("test.ann", "w", encoding="utf-8") as f:
             )  # relation annotations
 ## These are the annotation.con and visual.conf configuration files
 # annotation.conf file
-with open("annotation.conf", "w", encoding="utf-8") as f:
+with open("output/annotation.conf", "w", encoding="utf-8") as f:
     f.write("[entities]\n")
     for row in uposcolsdf.itertuples():
         f.write(row.pos + "\n")
@@ -110,7 +127,7 @@ with open("annotation.conf", "w", encoding="utf-8") as f:
     f.write("[attributes]\n")
 
 # visual.conf file
-with open("visual.conf", "w", encoding="utf-8") as f:
+with open("output/visual.conf", "w", encoding="utf-8") as f:
     f.write("[labels]\n")
     f.write("[drawing]\n")  # write UPOS tags and corresponding chosen colors
     for row in uposcolsdf.itertuples():
