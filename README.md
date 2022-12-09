@@ -14,4 +14,8 @@ Once the files have been generated they need to be manually moved to your workin
 BRAT directory in a dedicated directory under the data directory. Also take care of
 changing the ownership of the files to one readable and writable to the BRAT webserver.
 
+Here is a sample output screenshot:
+
+<img width="2072" alt="Screenshot 2022-12-07 at 15 08 22" src="https://user-images.githubusercontent.com/15216911/206663665-3af3a9c7-0e04-42c9-8715-f3cafaf7115d.png">
+
 Enjoy
